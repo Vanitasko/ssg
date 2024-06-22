@@ -19,16 +19,4 @@ class HTMLNode:
         return accumulator[1:]
 
     def __repr__(self):
-        if self.tag is not None:
-            return_string = self.tag
-
-        if self.value is not None:
-            return_string += ' ' + self.value
-
-        if self.children is not None:
-            return_string += ' ' + ' '.join(self.children.items())
-
-        if self.props is not None:
-            return_string += ' ' + ' '.join(self.props)
-
-        return return_string
+        return f'HTMLNODE({self.tag}, {self.value}, children: {self.children}. {self.props})'
